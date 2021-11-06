@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "cd15fdb9-5b7c-44ec-b35c-8479f75a1d56",
+		"name": "Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Client by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/client/61835293aad20636d900d27c",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client",
+						"61835293aad20636d900d27c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Client by Identity Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/client/identity/6333333",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client",
+						"identity",
+						"6333333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"clientIdentityType\": \"2020\",\r\n        \"clientIdentityNumber\": \"6333333\",\r\n        \"clientType\": \"PERSONAL\",\r\n        \"name\": \"jhonathan\",\r\n        \"email\": \"qweqwe@gmail.com\",\r\n        \"phone\": \"999999999\",\r\n        \"address\": \"Mff9lt9 mariscal cáceres sjl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

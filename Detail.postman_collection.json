@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "6d358082-a70e-41fd-9208-20b59a11be0b",
+		"name": "Detail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/details",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/details/61817218e66a627fb7d95ef7",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"details",
+						"61817218e66a627fb7d95ef7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Account Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/details/acc/999555886",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"details",
+						"acc",
+						"999555886"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail by IBAN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registre new Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accNumber\":\"999555886\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/details/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"details",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Detail",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"61817218e66a627fb7d95ef7\",\r\n    \"accNumber\": \"999555886\",\r\n    \"obtaining\": {\r\n        \"product\": {\r\n            \"productName\": null,\r\n            \"productType\": null,\r\n            \"politics\": {\r\n                \"clientType\": null,\r\n                \"commissionMaintenance\": false,\r\n                \"maxLimitMonthMovements\": false,\r\n                \"maxLimitMonthMovementsQuantity\": null\r\n            }\r\n        },\r\n        \"clientHolder\": null,\r\n        \"clientAuthorizedSigner\": null,\r\n        \"iban\": \"EP96\"\r\n    },\r\n    \"dateTime\": \"2021-11-02T12:15:04.809\",\r\n    \"balance\": 0.0,\r\n    \"limitMovementsMonth\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/details/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"details",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

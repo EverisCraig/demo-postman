@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "035786dc-1443-4b80-8ce0-b0db2c8973b2",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Product by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/products/find/617cc671e5ca4a640b4b395d",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products",
+						"find",
+						"617cc671e5ca4a640b4b395d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Product by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/products/name/Enterprise",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products",
+						"name",
+						"Enterprise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"productName\": \"CURRENT ACCOUNT\",\r\n        \"productType\": \"BANK ACCOUNT\",\r\n        \"politics\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"productName\": \"SAVING\",\r\n        \"productType\": \"BANK ACCOUNT\",\r\n        \"politics\": {\r\n             \"clientTypeTarget\": [\r\n            \"PERSONAL\"\r\n        ],\r\n        \"commissionMaintenance\": false,\r\n        \"maxLimitMonthlyMovements\": true,\r\n        \"maxLimitMonthlyMovementsQuantity\": 100,\r\n        \"maxLimitCreditPerson\": null,\r\n        \"maxLimitCreditEnterprise\": null\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/products/61832af3dcb4aa4a05138735",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products",
+						"61832af3dcb4aa4a05138735"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/products/delete/6181705faae1531e02384677",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products",
+						"delete",
+						"6181705faae1531e02384677"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
